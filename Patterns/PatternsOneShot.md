@@ -25,6 +25,7 @@
                 // for printing spaces in each row
                 for(int j = 1;j<=spaces;j++){
                     cout<<" ";
+                    
                 }
                 
                 // for printing numbers in each row
@@ -87,3 +88,39 @@
           // would get printed in 1 line.
           cout<<endl;
       }
+### 7. ![image](https://github.com/Aaditatgithub/Strivers-A2Z-DSA-Sheet/assets/131251920/e8064e18-fadd-42f3-b7ef-23c12d8fdc04)
+      -> for i (0  to n-1 )
+            print n - i stars
+            print 2 * i spaces
+            print n - i stars
+         for ( 0 to n - 1)
+            print i + 1 stars
+            print (n - i - 1) * 2 spaces
+            print i + 1 spaces
+### 8. ![image](https://github.com/Aaditatgithub/Strivers-A2Z-DSA-Sheet/assets/131251920/49e81695-8ba4-46f4-af54-b44c97f8c615)
+      ->
+           // Outer loop for no. of rows
+           for(int i=0;i<2*n-1;i++){
+               
+               // inner loop for no. of columns.
+               for(int j=0;j<2*n-1;j++){
+                   
+                   // Initialising the top, down, left and right indices of a cell.
+                   int top = i;
+                   int bottom = j;
+                   int right = (2*n - 2) - j;
+                   int left = (2*n - 2) - i;
+                   
+                   // Min of 4 directions and then we subtract from n
+                   // because previously we would get a pattern whose border
+                   // has 0's, but we want with border N's and then decreasing inside.
+                   cout<<(n- min(min(top,bottom), min(left,right)))<<" ";
+               }
+               
+               // As soon as the numbers for each iteration are printed, we move to the
+               // next row and give a line break otherwise all numbers
+               // would get printed in 1 line.
+               cout<<endl;
+           }
+      
+      
