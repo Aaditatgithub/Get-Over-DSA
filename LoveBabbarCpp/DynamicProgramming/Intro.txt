@@ -1,0 +1,4 @@
+2 Approaches
+    -> Top-Down Approach = Recursion + Memoization (Store value of subproblems in a datastructure)
+    -> Bottom-Up = Tabulation Method
+    -> Space Optimisation
